@@ -16,7 +16,7 @@ RUN mix do deps.get, deps.compile
 
 # Build assets in production mode:
 WORKDIR /paraguas/apps/phoenix_app/assets
-RUN yarn install && ./node_modules/brunch/bin/brunch build --production
+RUN npm install && ./node_modules/brunch/bin/brunch build --production
 
 WORKDIR /paraguas/apps/phoenix_app
 RUN MIX_ENV=prod mix phx.digest
